@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url("https://unpkg.com/open-props");
+
+body {
+    background-image: radial-gradient(circle, hsla(341, 95%, 77%, 1) 0%, hsla(194, 51%, 67%, 1) 99%);
+    height: 100%;
+}
+
+.navbar {
+    /* display: block;
+    position: absolute;
+    top: 0; */
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar a:hover {
+    background-color: #FDDCD811;
+}
+
+.footer {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+
+.profile {
+    float: right;
+}
+
+#logo {
+    display: block;
+    float: right;
+    padding-top: 6.75px;
+    padding-right: 15px;
+}
+
+#github {
+    position: relative;
+    top: 3px;
+    color: white;
+}
+
+.profile:hover #logo {
+    opacity: 0.6;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+#myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
+
+#myDropdown {
+    width: 100px;
+}
+
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 200px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    height: 400px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.card {
+    margin: 20px;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all .2s linear;
+    background: rgba(255, 255, 255, .1)
+}
+
+.card:hover {
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+    transform: translate3D(0, -2px, 0);
+}
+
+.card h1 {
+    background: rgb(235, 246, 247);
+    margin: 0px;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card p {
+    margin: 0px;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+:root {
+    --page-background: 277deg, 55%, 12%;
+}
+
+.dropbtn {
+    --text-base: 277deg, 55%, 40%;
+    --text-hover: 307deg, 72%, 86%;
+    --shadow-start: 52deg, 100%, 72%;
+    --shadow-end: 282deg, 90%, 50%;
+    --shadow-inner: 277deg, 90%, 62%;
+    all: unset;
+    color: rgb(162, 243, 255);
+    font: 700 .8rem/1.2 Raleway, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.65em;
+    max-width: 100%;
+    width: 12em;
+    background: inherit;
+    background-clip: padding-box;
+    border: 5px solid #dad2d6;
+    border-radius: 2em;
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s ease-out;
+    margin: 10px;
+}
+
+.dropbtn::before,
+.dropbtn::after {
+    content: "";
+    border-radius: inherit;
+    transition: inherit;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.dropbtn::before {
+    inset: -0.2em;
+    z-index: -1;
+    background: #FC8BAF;
+    filter: blur(1.2em) saturate(1.2);
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+    opacity: 0;
+}
+
+.dropbtn::after {
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px rgba(255, 255, 255, 0.7), 1px 1px 0 4px #fff;
+    mix-blend-mode: overlay;
+    opacity: 0;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    color: hsla(var(--text-hover), 1);
+    border-color: transparent;
+    box-shadow: #7FC1D5;
+}
+
+.dropbtn:hover::before,
+.dropbtn:hover::after,
+.dropbtn:focus::before,
+.dropbtn:focus::after {
+    transform: none;
+    opacity: 1;
+}
+
+#searchBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+button:hover {
+    opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #e382a1c3;
+}
+
+.signupbtn {
+    background-color: #81cce4c3;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(255, 255, 255, 0.813);
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn,
+    .signupbtn {
+        width: 100%;
+    }
+}
+
+.saveBtn {
+    /* padding: 4px 20px;
+    margin: 0px; */
+    border: none;
+    width: 100%;
+    background:rgb(235, 246, 247);
+    opacity: 0.7;
+    margin: 0px;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
