@@ -239,8 +239,10 @@ body {
 input[type=text],
 input[type=password] {
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding-right: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 5px 0px 22px 0px;
     display: inline-block;
     border: none;
     background: #f1f1f1;
@@ -252,6 +254,7 @@ input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
+
 
 
 button:hover {
@@ -272,8 +275,8 @@ button:hover {
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn,
 .signupbtn {
-    color:white;
-    border:0;
+    color: white;
+    border: 0;
     float: left;
     width: 50%;
 }
@@ -345,6 +348,7 @@ hr {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
+
     .cancelbtn,
     .signupbtn {
         width: 100%;
@@ -356,7 +360,7 @@ hr {
     margin: 0px; */
     border: none;
     width: 100%;
-    background:rgb(235, 246, 247);
+    background: rgb(235, 246, 247);
     opacity: 0.7;
     margin: 0px;
     text-align: center;

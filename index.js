@@ -64,7 +64,7 @@ function validateForm(event) {
     }
     else {
         alert("Your account has been created successfully");
-        document.write("JavaScript form has been submitted successfully");
+        modal.style.display = "none";
     }
 }
 
